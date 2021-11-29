@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomePageComponent
+{
+    path:'team',
+    loadChildren:() => import('../team/team.module').then(m => m.TeamModule)
   }
 ];
 
